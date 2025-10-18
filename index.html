@@ -11,43 +11,121 @@
       sizes="96x96"
     />
 
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
     <title>devChallenges.io | Minimal Blog Card</title>
 
     <!--You are welcome to delete these styles or modify them in your own stylesheet -->
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+
+       /* Для мелких экранов до 480px */
+       @media screen and (max-width: 480px) {
+       /* Сюда пишешь стили для телефона, типа шрифты поменьше, блоки в один столбик и т.д. */
       }
 
-      body {
-        height: 100vh;
+      /* Для средних экранов до 768px */
+      @media screen and (max-width: 768px) {
+       /* Сюда стили для планшета. Может, два столбика, какие-то отступы другие. */
+      }
+
+      /* Для больших экранов (от 1025px и выше) */
+      @media screen and (min-width: 1025px) {
+        /* Сюда уже основные, "жирные" стили для больших мониторов. */
+      } 
+
+
+      *{
+        font-family: 'Sora', sans-serif;
+      }
+      body{
+        background-color: #FAFAF9;
+      }
+
+      .card {
+        margin: 164px auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #FFFFFF;
+        border-radius: 20px;
+        box-shadow: 8px 8px 20px 0px rgba(85, 85, 85, 0.08);
+        width: 368px;
+        height:400px; 
+      }
+
+      .card img {
+        border-radius: 10px;
+        margin: 16px;
+        width: 336px;
+        height: 152px;
+      }
+
+      .card .text-content h3{
+        margin: 0;
+      }
+
+      .card .design {
+        color: #7C19EE;
+        background-color: #F2EAFD;
+        font-family: 'Sora', sans-serif;
+        font-size: 0.625rem;
+        font-weight: 600;
+        border-radius: 30px;
+        margin: 16px 16px;
+        padding: 6px 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card .text-content h3 {
+        margin: 0px 0px 6px 16px;
+        font-weight: 600;
+      }
+
+      .card .text-content p {
+        margin: 0px 0px 20px 16px;
+        font-weight: 200;
+        font-size: 14px;
+      }
+
+      .card .author {
+        margin: 0px 0px 20px 16px;
+        padding-top: 20px;
+        font-weight: 200;
+        font-size: 14px;
       }
 
       .author-info {
-        font-size: 14px;
-        text-align: center;
-        margin-top: 16px;
-        color: rgb(55, 65, 81);
+        position: fixed;
+        width: 300px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-bottom: 0px;
+        margin-top: 20%;
       }
 
-      .author-info a {
-        text-decoration: none;
-      }
+       
     </style>
   </head>
+
+  
   <body>
-    <!-- Design
+    <div class="card">
+      <img src="resources/Cactus.jpg" alt="cactus">
+      <p class="design">Design</p>
 
-  Embracing Minimalism
+      <div class="text-content">
+        <h3>Embracing Minimalism</h3>
+        <p>From minimalist sculptures to minimalist <br> paintings, this blog will inspire you to <br> appreciate the beauty that lies in simplicity.</p>
+      </div>
 
-  From minimalist sculptures to minimalist paintings, this blog will inspire you to appreciate the beauty that lies in simplicity.
-
-  Annie Spratt -->
+      <p class="author">Annie Spratt</p>
+    </div>
 
     <div class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
+      Coded by <a href="#">Aiperi Zhenishova</a> | Challenge by
       <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
         >devChallenges.io</a
       >.
